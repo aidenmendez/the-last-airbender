@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
   def index
-    binding.pry
-    @results = find_by_nation(params[:nation])
+    @results = CharactersFacade.find_by_nation(params[:nation])
   end
 end
